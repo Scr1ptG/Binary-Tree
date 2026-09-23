@@ -1,0 +1,47 @@
+static Node insert(node Node, int value) {
+	Если узел указывает на null
+		return new Node(value)
+
+	Если value меньше node.value 
+		node.left = insert(параметры)
+	Если value больше node.value
+		node.right = insert(параметры)
+	
+	вернуть node
+
+//
+
+static Boolean contains(Node node, int value) {
+	если дерево пустое вернуть false
+	
+	если value равно значение node.value
+		вернуть истино
+	
+	если value меньше node.value
+		рекурсивно вызываем contains для node.left
+	return contains(node.right, value);
+
+//
+
+inOrder(узел):
+    если узла нет — выйти
+    inOrder(левый)
+    напечатать узел
+    inOrder(правый)
+
+//
+
+static int min(Node node){
+	до тех пор пока node.left не равен null
+		node = node.left
+	
+	вернуть node.value
+
+
+//
+
+static int height(node Node) {
+	if (node == null) return 0;
+    return 1 + Math.max(height(node.left),
+                        height(node.right));
+}
